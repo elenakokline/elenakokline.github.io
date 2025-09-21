@@ -1,9 +1,6 @@
 ﻿@page "/"
 @page "/welcome"
 
-@inject Blazor.Analytics.IAnalytics Analytics
-
-
 <PageTitle>Elena Kokline</PageTitle>
 
 <MudHidden Breakpoint="Breakpoint.MdAndDown">
@@ -18,7 +15,5 @@
     protected override void OnAfterRender(bool firstRender)
     {
         base.OnAfterRender(firstRender);
-
-        Analytics.TrackEvent("example", new { example = "Example 2" });
     }
 }
